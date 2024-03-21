@@ -1,0 +1,784 @@
+/* 
+Font Family texto: font-family: "Poppins", sans-serif;
+Font Family Titulo: font-family: "Red Hat Display", sans-serif;
+*/
+
+*{
+    padding: 0;
+    margin: 0 auto;
+    font-family:"Poppins", sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#Contenido{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+/* Navegador */
+:root{
+    --azul1: #132740;
+    --azul2:#132742;
+    --azulClaro1: #407087;
+    --azulClaro2: #71ADB5;
+    --rosa1: #FECBCA;
+    --rosa2: #FF8E90;
+}
+
+@font-face {
+    font-family: Cocogoose;
+    src: url(../fonts/Cocogoose-Pro-Regular-trial.ttf);
+}
+
+#menu{
+    width: 100%;
+    height: 90px;
+    background-color: var(--azul1);
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    padding: 0px 10px;
+}
+
+.logo{
+    width: 20%;
+    margin-top: 10px;
+}
+
+.menu-hamburguesa{
+    display: none;
+}
+
+.fa-bars{
+    color: #ffffff;
+    font-size: 35px;
+    
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav li a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 25px;
+    transition: 0.2s;
+    margin: 0 5px;
+    line-height: 15px;
+    position: relative;
+    font-weight: 500;
+}
+
+.nav li a::before{
+    content: ' ';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--azulClaro1);
+    bottom: 0;
+    left: 0;
+    transition: all .25s ease-in-out;
+}
+
+.nav li a:hover::before{
+    width: 100%;
+}
+
+.nav li a:hover{
+    color: var(--azulClaro2);
+    transition: .25s ease-in-out;
+}
+@media screen and (max-width: 1080px) {
+    #menu{
+        padding: 0px 50px;
+    }
+    
+}
+
+@media screen and (max-width: 999px) {
+    .menu-hamburguesa{
+        display: block;
+        cursor: pointer;
+        padding: 0px 60px;
+        margin: 0;
+    }
+
+
+    .logo{
+        margin-left: 40px;
+    }
+    
+    .nav{
+        height: 0;
+        position: absolute;
+        top: 85px;
+        left: 1; right: 0;
+        width: 40%;
+        background-color: var(--azul2);
+        transition: 0.2s;
+        overflow: hidden;
+        /*z-index: -1;*/
+    }
+
+    .nav.active{
+        height: 100%;
+        z-index: 2;
+    }
+
+    .nav ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: right;
+        transition: 0.2s;
+        opacity: 0;
+    }
+
+    .nav.active ul{
+        opacity: 1;
+    }
+
+    .nav li a{
+        margin-bottom: 12px;
+        color: #ffffff;
+    }
+    
+}
+
+@media screen and (max-width: 859px) {
+    .logo{
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width: 703px) {
+    .logo{
+        width: 30%;
+    }
+
+}
+
+@media screen and (max-width: 609px) {
+    .logo{
+        width: 40%;
+        margin-left: 0;
+    }
+
+    .nav{
+        width: 100%;
+    }
+
+    .nav ul{
+        text-align: center;
+    }
+
+    .menu-hamburguesa{
+        padding: 0px 0px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .logo{
+        width: 50%;
+    }
+
+}
+
+
+@media screen and (max-width: 360px) {
+    .logo{
+        width: 50%;
+    }
+
+    .menu-hamburguesa{
+        padding: 0px 0px;
+    }
+
+    .fa-bars{
+        font-size: 28px;
+        
+    } 
+
+}
+/* Portada del lobo de caperucita */
+.Encabezado{
+    width: 100%;
+    height: 550px;
+    background-color: #407087;
+}
+#tit{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 2.5%;
+}
+#acosador{
+    width: 72%;
+    margin-left: 15%;
+}
+@media screen and (max-width: 1200px) {
+    .Encabezado{
+        height: auto;
+    }
+}
+/* Informacion */
+.Pregunta {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, .1fr); 
+    gap: 10px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+.Pregunta .contenedor1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1; 
+    grid-row-end: 1; 
+    padding: 10px;
+    height: auto;
+}
+.contenedor1 p{
+    color: #ff8e90;
+    font-size: 30px;
+    font-weight: 500;
+}
+.Pregunta .contenedor2 {
+    height: auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2; 
+    grid-row-end: 2; 
+    padding: 50px;
+    height: auto;
+    text-align: justify;
+}
+
+
+.contenedor2 p{
+    font-size: 16px;
+    color: var(--azul1);
+}
+.Pregunta .contenedor3 {
+    height: 250px;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2; 
+    grid-row-end: 2; 
+}
+.Pregunta .contenedor3 img {
+    transition: transform 0.3s ease; 
+}
+
+.Pregunta .contenedor3 img:hover {
+    transform: scale(1.2); 
+}
+.contenedor3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 960px) {
+    .Pregunta .contenedor3 {
+        height: 200px;
+    }
+    .contenedor1 p{
+        font-size: 30px;
+        padding: 0px 50px;
+    }
+    .contenedor2 p{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 780px) {
+    .Pregunta {
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(3, .1fr); 
+
+    }
+    .Pregunta .contenedor2 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .Pregunta .contenedor3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3; 
+        grid-row-end: 3; 
+    }
+}
+@media screen and (max-width: 676px) {
+    .contenedor1 p{
+        font-size: 30px;
+    }
+    .contenedor2 p{
+        font-size: 15px;
+    }
+    .Pregunta .contenedor3 {
+        height: 150px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .Pregunta .contenedor3 {
+        height: 200px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3; 
+        grid-row-end: 3; 
+    }
+}
+/* Medidas de prevencion */
+.Medidas{
+    width: 100%;
+    height: auto;
+    background-color: #71ADB5;
+    display: grid;
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.Medidas h1{
+    color: #132742;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.Prevenciones {
+    margin: 0 auto; 
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, 300px);
+    gap: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.Prevenciones .privacidad {
+    border-radius: 100%;
+    background-color: #407087;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1; 
+    grid-row-end: 1; 
+}
+.privacidad img{
+    width: 100%;
+    height: 100%;
+}
+.privacidad {
+    cursor: pointer;
+}
+.privacidad {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .privacidad img {
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .privacidad img:hover {
+    transform: scale(1.1); 
+}
+.Prevenciones .verificacion {
+    border-radius: 100%;
+    background-color: #407087;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1; 
+    grid-row-end: 1; 
+}
+.verificacion img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.verificacion {
+    cursor: pointer;
+}
+.verificacion {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .verificacion img {
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .verificacion img:hover {
+    transform: scale(1.1); 
+}
+.Prevenciones .selectivo {
+    border-radius: 100%;
+    background-color: #407087;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1; 
+    grid-row-end: 1; 
+}
+.selectivo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.selectivo {
+    cursor: pointer;
+}
+.selectivo {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .selectivo img {
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .selectivo img:hover {
+    transform: scale(1.1); 
+}
+.Prevenciones .reportar {
+    border-radius: 100%;
+    background-color: #407087;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2; 
+    grid-row-end: 2; 
+}
+.reportar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.reportar {
+    cursor: pointer;
+}
+.reportar {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .reportar img {
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .reportar img:hover {
+    transform: scale(1.1); 
+}
+.Prevenciones .preventivo {
+    border-radius: 100%;
+    background-color: #407087;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2; 
+    grid-row-end: 2; 
+}
+.preventivo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.preventivo {
+    cursor: pointer;
+}
+.preventivo {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .preventivo img {
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .preventivo img:hover {
+    transform: scale(1.1); 
+}
+.Prevenciones .fiscalia {
+    border-radius: 100%;
+    background-color: #407087;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2; 
+    grid-row-end: 2; 
+}
+.fiscalia img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fiscalia {
+    cursor: pointer;
+}
+.fiscalia {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .fiscalia img {
+    transition: transform 0.3s ease; 
+}
+.Prevenciones .fiscalia img:hover {
+    transform: scale(1.1); 
+}
+.Prevenciones .privacidad:hover {
+    background-color: #ff8e90; 
+}
+.Prevenciones .verificacion:hover {
+    background-color: #ff8e90; 
+}
+.Prevenciones .selectivo:hover {
+    background-color: #ff8e90; 
+}
+.Prevenciones .reportar:hover {
+    background-color: #ff8e90; 
+}
+.Prevenciones .preventivo:hover {
+    background-color: #ff8e90; 
+}
+.Prevenciones .fiscalia:hover {
+    background-color: #ff8e90; 
+}
+.Informacion {
+    height: auto;
+    display: none;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px;
+    background-color: #fecbca;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 999; 
+    font-size: 16px;
+    width: 80%; 
+    text-align: justify;
+    color: var(--azul1);
+    
+}
+.Informacion.active {
+    display: block; 
+}
+.Informacion h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+@media screen and (max-width: 1024px) {
+    .Medidas h1{
+        font-size: 50px;
+    }
+    .Prevenciones {
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(2, 200px);
+    }
+}
+@media screen and (max-width: 960px) {
+    .Informacion { 
+        font-size: 14px;
+    }
+    .Informacion h3 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 768px) {
+    .Medidas h1{
+        font-size: 40px;
+    }
+    .Prevenciones {
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(3, 200px);
+    }
+    .Prevenciones .selectivo {
+        border-radius: 100%;
+        background-color: #407087;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2; 
+        grid-row-end: 2; 
+    }
+    .Prevenciones .reportar {
+        border-radius: 100%;
+        background-color: #407087;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2; 
+        grid-row-end: 2; 
+    }
+    .Prevenciones .preventivo {
+        border-radius: 100%;
+        background-color: #407087;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 3; 
+        grid-row-end: 3; 
+    }
+    .Prevenciones .fiscalia {
+        border-radius: 100%;
+        background-color: #407087;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 3; 
+        grid-row-end: 3; 
+    }
+}
+@media screen and (max-width: 676px) {
+    .Medidas h1{
+        font-size: 35px;
+    }
+    .Prevenciones {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(3, 150px);
+    }
+    .Informacion {
+        font-size: 13px;
+    }
+    .Informacion h3 {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .Medidas h1{
+        font-size: 35px;
+    }
+    .Prevenciones {
+        grid-template-columns: repeat(1, 200px);
+        grid-template-rows: repeat(6, 200px);
+    }
+    .Prevenciones .verificacion {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2; 
+        grid-row-end: 2; 
+    }
+    .Prevenciones .selectivo {
+        border-radius: 100%;
+        background-color: #407087;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 3; 
+        grid-row-end: 3; 
+    }
+    .Prevenciones .reportar {
+        border-radius: 100%;
+        background-color: #407087;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 4; 
+        grid-row-end: 4; 
+    }
+    .Prevenciones .preventivo {
+        border-radius: 100%;
+        background-color: #407087;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 5; 
+        grid-row-end: 5; 
+    }
+    .Prevenciones .fiscalia {
+        border-radius: 100%;
+        background-color: #407087;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 6; 
+        grid-row-end: 6; 
+    }
+}
+/* Pie de pies */
+footer{
+    background-color: var(--azul1);
+    color: #ffffff;
+    font-size: 15px;
+
+}
+footer h3{
+    margin-bottom: 10px;
+    color: var(--azulClaro1);
+    font-weight: 500;
+}
+footer a{
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+}
+footer a:hover, .social .fa-brands:hover{
+    color: var(--azulClaro2); 
+
+}
+.info-footer{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    padding: 50px;
+    box-sizing: border-box;
+
+}
+.logoInfo p{
+    text-align: justify;
+}
+
+.logoInfo img{
+    width: 70%;
+}
+
+.links, .contact, .social, .legal{
+    line-height: 30px;
+}
+
+.social .fa-brands{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.social .fa-brands:hover{
+    transition: 0.2s ease-in-out;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    background-color: #0d1d31;
+}
+@media screen and (max-width: 1024px) {
+    .info-footer{
+        grid-template-columns: 0.9fr 0.8fr 0.8fr 1fr 1fr;
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 999px) {
+    .info-footer{
+        grid-auto-flow: column;
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 50px;
+        gap: 20px;
+    }
+    .logoInfo img{
+        width: 30%;
+        text-align: center;
+    }
+    .logoInfo{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 560px) {
+    .logoInfo img{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 360px) {
+    .logoInfo img{
+        width: 70%;
+    }
+}

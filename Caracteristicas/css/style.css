@@ -1,0 +1,383 @@
+:root {
+    --azul1: #132740;
+    --azul2: #132742;
+    --azulClaro1: #71ADB5;
+    --azulClaro2: #407087;
+    --blanco: #FFFFFF;
+    --rosa1: #FECBCA;
+    --rosa2: #FF8E90;
+}
+
+@font-face {
+    font-family: Cocogoose;
+    src: url(../fonts/Cocogoose-Pro-Regular-trial.ttf);
+}
+
+
+html
+{
+    width: fit-content;
+}
+
+body {
+    margin: 0;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+    color: var(--azul1);;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: Cocogoose;
+}
+
+
+
+.Cbloque {
+    width: 100%;
+    height: auto; 
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Cheader {
+    background-color: var(--azulClaro2);
+    height: 550px;
+}
+
+@media screen and (max-width: 1200px) {
+    .Cheader{
+        height: auto;
+    }
+
+    #imgtit {
+        width: 75%;
+    }
+    
+
+}
+
+.CbloqueParallax {
+    width: 100%;
+    display: grid;
+}
+
+.Csubtitulos {
+    padding: 50px; /* Yo tenía un padding más grande de 5% 10% */
+    padding:  5% 10%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;  /* Gap de 5% */
+    height: 100vh;
+    align-items: center;
+    -webkit-animation: fundidoPFalso 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: fundidoPFalso 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 30%;
+
+}
+
+.Csubtitulos img {
+    -webkit-animation: ImagenAnimada 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    animation: ImagenAnimada 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    animation-timeline: view();
+}
+
+.Ccolumnast {
+    height: auto;
+}
+
+.Iizquierda .Ccolumnast h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--rosa2);
+    -webkit-animation: fundidoH3i linear both;
+    animation: fundidoH3i linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+}
+
+.Iderecha .Ccolumnast h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--azul2);
+    -webkit-animation: fundidoH3d linear both;
+    animation: fundidoH3d linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+}
+
+.Ccolumnast p{
+    -webkit-animation: fundido linear both;
+    animation: fundido linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
+}
+
+.Iizquierda {
+    background-color: var(--blanco);
+}
+
+.Iderecha {
+    background-color: var(--azulClaro1);
+}
+
+#tit {
+    width: 45%;
+    margin-top: 2.5%;
+}
+
+#imgtit {
+    width: 100%;
+}
+
+#priva {
+    max-height: 40%;
+}
+
+.invis {
+    max-width: 50%;
+}
+
+p {
+    line-height: 1.6;
+
+}
+
+hr {
+    border-color: var(--azul1);
+}
+
+.Csubtitulos img:first-child {
+    filter: drop-shadow(5px 5px 3px var(--azul2));
+}
+
+.Csubtitulos img:nth-child(2){
+    filter: drop-shadow(0px -2px 13px var(--azul2));
+}
+
+/* WHOOSH */
+/* ----- Animaciones ----- */
+
+
+
+@keyframes fundido {
+    0% {
+        opacity: 0;
+        transform: translate(0, 40px);
+    }
+    50% {
+        opacity: 1;
+        
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+    
+}
+
+@keyframes fundidoPFalso {
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+    30%{
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    
+}
+
+@keyframes ImagenAnimada {
+    0% {
+        -webkit-transform: translateZ(80px);
+                transform: translateZ(80px);
+                opacity: 0;
+      }
+      50%{
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+
+      }
+}
+
+@keyframes fundidoH3i {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    50% {
+        opacity: 1;
+        
+    }
+    100% {
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes fundidoH3d {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50% {
+        opacity: 1;
+        
+    }
+    100% {
+        transform: translateX(0);
+    }
+    
+}
+
+/* ------ MediaQueries ------ */
+
+
+@media screen and (max-width: 999px) {
+    .Csubtitulos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: auto;
+        width: 100%;
+    }
+
+    .poppins-regular{
+        font-size: 15px;
+    }
+
+    .Iizquierda img {
+        grid-row: 2;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .poppins-regular{
+        font-size: 15px;
+    }
+
+}
