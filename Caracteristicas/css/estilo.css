@@ -117,12 +117,12 @@
         background-color: var(--azul2);
         transition: 0.2s;
         overflow: hidden;
-        /*z-index: -1;*/
+        z-index: 2;
     }
 
     .nav.active{
         height: 100%;
-        /*z-index: -1;*/
+        z-index: 2;
     }
 
     .nav ul{
